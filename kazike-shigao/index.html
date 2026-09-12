@@ -393,6 +393,7 @@ footer .desc{color:var(--muted);font-size:13px}
 </footer>
 
 <script>
+document.documentElement.classList.add('js');
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
