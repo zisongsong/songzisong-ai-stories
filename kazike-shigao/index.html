@@ -271,7 +271,7 @@ footer .desc{color:var(--muted);font-size:13px}
       <div class="no" data-page-node-id="HB15ah2Q92res2FjYyScO3">02</div>
       <h2 data-page-node-id="AryKnXpFmr7lbOG4yIeSa9">样稿</h2>
     </div>
-    <div class="article reveal" data-page-node-id="pPOvYCVEjAgnPF3nlipW1T">
+    <div class="article" data-page-node-id="pPOvYCVEjAgnPF3nlipW1T">
       <h3 class="article-title" data-page-node-id="QdzcMWYaYnRP4IyFu9p6pH">奶奶给AI数字人写了四封情书</h3>
 
       <div class="cold-open" data-page-node-id="coldOpen01">
@@ -401,7 +401,7 @@ const observer = new IntersectionObserver((entries) => {
       observer.unobserve(entry.target);
     }
   });
-}, { threshold: 0.08 });
+}, { threshold: 0 });
 document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
 </script>
 
