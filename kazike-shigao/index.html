@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-page-node-id="rvUCDcU2rduegcXPQli2Ub">
+<head data-page-node-id="FBloJ3SugR0VZNAOH7puL8">
+<meta charset="UTF-8" data-page-node-id="BIE0fvz3Cf2BETuzYCcCAO">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" data-page-node-id="zrwDrySaWwt0ptwGPVPTmd">
+<title>试稿提交 · 宋奕璇（宋子松）</title>
+<style>
+/* =============================================================
+   小松品牌 VI · 知性的野兽派拼贴
+   来源：00-公司中台-行政与财务/一棵松个人品牌介绍页H5/index.html
+        01-个人IP-小松的内容创作系统/00-系统核心/品牌视觉/品牌VI规范.md
+   ============================================================= */
+:root{
+  --bean:#E2F0D9;
+  --yellow:#FFFFE0;
+  --cream:#FFF8F0;
+  --paper:#FFFDF3;
+  --blue:#2E5090;
+  --clay:#C65D3E;
+  --ink:#2F4032;
+  --muted:#687763;
+  --warmgray:#B8A99A;
+  --title:"Hannotate SC","Kaiti SC","STKaiti","KaiTi","Songti SC","Noto Serif SC",serif;
+  --body:"PingFang SC","Noto Sans SC",system-ui,-apple-system,sans-serif;
+  /* 手绘感不规则圆角 */
+  --radius-hand:255px 15px 225px 15px/15px 225px 15px 255px;
+  --radius-hand-alt:15px 225px 15px 255px/255px 15px 225px 15px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--body);
+  font-size:15px;
+  line-height:1.9;
+  color:var(--ink);
+  background:var(--bean);
+  -webkit-font-smoothing:antialiased;
+}
+/* 纸张颗粒 */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  opacity:.07;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  mix-blend-mode:multiply;
+  z-index:999;
+}
+::selection{background:var(--clay);color:var(--cream)}
+.container{max-width:1060px;margin:0 auto;padding:0 40px}
+
+/* ===== Nav ===== */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:var(--cream);
+  border-bottom:2px solid var(--ink);
+}
+nav .container{height:64px;display:flex;align-items:center;justify-content:space-between}
+nav .brand{font-family:var(--title);font-size:18px;font-weight:700;color:var(--ink);letter-spacing:1px}
+nav .links{display:flex;gap:28px}
+nav .links a{font-size:14px;color:var(--muted);text-decoration:none;transition:color .15s ease}
+nav .links a:hover{color:var(--blue)}
+
+/* ===== Hero ===== */
+.hero{padding:168px 0 88px;background:var(--bean)}
+.hero .kicker{
+  display:inline-block;
+  font-family:var(--title);
+  font-size:15px;font-weight:700;letter-spacing:4px;
+  color:var(--clay);
+  margin-bottom:24px;
+  transform:rotate(-1.2deg);
+}
+.hero h1{
+  font-family:var(--title);
+  font-size:clamp(38px,6vw,58px);
+  font-weight:700;line-height:1.25;
+  margin-bottom:28px;
+}
+.hero .meta{font-size:13px;color:var(--muted);line-height:1.7}
+.hero .meta span+span::before{content:"·";margin:0 10px}
+
+/* ===== Sections ===== */
+section{padding:88px 0}
+.section-head{margin-bottom:48px}
+.section-head .no{
+  display:inline-block;
+  font-family:var(--title);
+  font-size:22px;font-weight:700;letter-spacing:3px;
+  color:var(--cream);
+  background:var(--blue);
+  padding:6px 20px;
+  border:2px solid var(--ink);
+  border-radius:var(--radius-hand);
+  transform:rotate(-1.5deg);
+  margin-bottom:24px;
+}
+.section-head h2{font-family:var(--title);font-size:clamp(34px,4.6vw,46px);font-weight:700;line-height:1.3}
+
+/* ===== Topic cards ===== */
+.topics{display:grid;grid-template-columns:1fr 1fr;gap:36px}
+@media (max-width:820px){.topics{grid-template-columns:1fr}}
+.card{
+  background:var(--paper);
+  border:2px solid var(--ink);
+  border-radius:var(--radius-hand);
+  padding:40px 34px;
+  transition:transform .5s cubic-bezier(.16,1,.3,1);
+}
+.card:nth-child(1){transform:rotate(-.5deg)}
+.card:nth-child(2){transform:rotate(.5deg)}
+.card:nth-child(1):hover{transform:rotate(0deg) translateY(-4px)}
+.card:nth-child(2):hover{transform:rotate(0deg) translateY(-4px)}
+.card .tag{
+  display:inline-block;
+  font-family:var(--title);
+  font-size:14px;font-weight:700;letter-spacing:2px;
+  color:var(--clay);
+  margin-bottom:16px;
+}
+.card h3{
+  font-family:var(--title);
+  font-size:23px;font-weight:700;line-height:1.45;
+  margin-bottom:22px;
+  color:var(--ink);
+}
+.card p{font-size:15px;line-height:1.9;color:var(--ink);margin-bottom:16px}
+.card p:last-child{margin-bottom:0}
+
+/* ===== Article ===== */
+.article-wrap{background:var(--cream);border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}
+.article{max-width:700px;margin:0 auto}
+.article-title{
+  font-family:var(--title);
+  font-size:clamp(30px,4.6vw,44px);
+  font-weight:700;line-height:1.35;
+  margin-bottom:44px;
+}
+.article h4{
+  font-family:var(--title);
+  font-size:23px;font-weight:700;line-height:1.4;
+  color:var(--blue);
+  margin:72px 0 32px;
+}
+.article h4::before{
+  content:"";
+  display:inline-block;
+  width:12px;height:12px;
+  background:var(--clay);
+  border:2px solid var(--ink);
+  transform:rotate(8deg);
+  margin-right:12px;
+}
+.article p{margin-bottom:24px;line-height:2}
+.article blockquote{
+  margin:36px 0;
+  padding:32px 36px;
+  background:var(--yellow);
+  border:2px solid var(--ink);
+  border-radius:var(--radius-hand);
+  transform:rotate(-.4deg);
+  line-height:2;
+}
+.article blockquote:nth-of-type(even){transform:rotate(.4deg)}
+
+/* 冷开场：与信件引用块区分（纸白底+陶土红左边条，无黄色底） */
+.cold-open{
+  margin:0 0 48px;
+  padding:28px 34px;
+  background:var(--paper);
+  border:2px solid var(--ink);
+  border-left:8px solid var(--clay);
+  border-radius:var(--radius-hand-alt);
+  transform:rotate(.3deg);
+  font-size:17px;
+  line-height:2;
+}
+.cold-open p{margin-bottom:0}
+
+/* ===== AI statement ===== */
+.ai-card{
+  max-width:700px;margin:0 auto;
+  background:var(--paper);
+  border:2px solid var(--ink);
+  border-radius:var(--radius-hand-alt);
+  padding:40px;
+  transform:rotate(.3deg);
+}
+.ai-card p{font-size:15px;line-height:1.9}
+.ai-card p strong{color:var(--blue);font-weight:700}
+
+/* ===== Footer ===== */
+footer{background:var(--bean);border-top:2px solid var(--ink);padding:56px 0}
+footer .container{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+footer .name{font-family:var(--title);font-size:16px;font-weight:700;color:var(--ink)}
+footer .desc{color:var(--muted);font-size:13px}
+
+/* ===== Reveal ===== */
+.reveal{opacity:0;transform:translateY(40px);transition:opacity .6s cubic-bezier(.16,1,.3,1),transform .6s cubic-bezier(.16,1,.3,1)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.card.reveal.visible:nth-child(1){transform:rotate(-.5deg)}
+.card.reveal.visible:nth-child(2){transform:rotate(.5deg)}
+.cold-open.reveal.visible{transform:rotate(.3deg)}
+.ai-card.reveal.visible{transform:rotate(.3deg)}
+
+@media (max-width:640px){
+  .container{padding:0 20px}
+  nav .links{gap:18px}
+  .hero{padding:132px 0 64px}
+  section{padding:64px 0}
+  .article blockquote{padding:24px 22px}
+  .ai-card{padding:30px 24px}
+}
+</style>
+</head>
+<body data-page-node-id="uligdxRpEHJFr8LLfTLYPZ">
+
+<nav data-page-node-id="qEDLPYOZC8GC59IBKrhqmP">
+  <div class="container" data-page-node-id="BJA8KIuZw0lplyqDZNTSIY">
+    <div class="brand" data-page-node-id="ZL51TpW6Q2NXqfYPSTpJuB">宋奕璇（宋子松） · 试稿提交</div>
+    <div class="links" data-page-node-id="w6BPXhBLW3h57OrUaAk1sE">
+      <a href="#topics" data-page-node-id="JDmU3oopqvpNGEtpANKRKU">选题</a>
+      <a href="#article" data-page-node-id="cogOzGWhYnUANJUF3DKfl7">样稿</a>
+      <a href="#ai" data-page-node-id="yIYTIoFdXONz0pae9tvjRG">AI 使用说明</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" data-page-node-id="E2rYniITCGgALApZLHGg1D">
+  <div class="container" data-page-node-id="dylmflrzhJXQzME46J8bUR">
+    <div class="kicker" data-page-node-id="CNjruqPkvrIal8zHK27JyK">AI 内容创作者试稿</div>
+    <h1 data-page-node-id="KOye0IzdQe0KNAwWWKiin7">两个选题，一篇样稿</h1>
+    <div class="meta" data-page-node-id="Hmjama325PRoxqAxhi4K4X">
+      <span data-page-node-id="SVYDPFAEL9SrGbWwRWLE5w">宋奕璇（宋子松）</span>
+      <span data-page-node-id="PHl1WLMBgmFDuKYFhGEn9z">应聘方向：泛互联网文化编辑（AI 向）/ 新媒体运营</span>
+      <span data-page-node-id="Rzry4r2qoANtNKI6kCy3HU">2026 年 9 月</span>
+    </div>
+  </div>
+</header>
+
+<section id="topics" data-page-node-id="qwbfjWcRCBviHiVrm3bHxJ">
+  <div class="container" data-page-node-id="ITy9BvRYZuzp3NuiAzKzap">
+    <div class="section-head reveal" data-page-node-id="6Baukxbuh1R35RCDBV8OTP">
+      <div class="no" data-page-node-id="gCL2Nr3fZ3S3EH3nX3jsdD">01</div>
+      <h2 data-page-node-id="tPjXKhIN9mNzEOWVxHotY6">两个选题</h2>
+    </div>
+    <div class="topics" data-page-node-id="CIyxzNU8itbC4FEw8A3Dmc">
+      <div class="card reveal" data-page-node-id="oGN9HIkDumZyFoDW8xbRcx">
+        <div class="tag" data-page-node-id="K5Nf77NFiuM5kgBfjw9TmU">选题一 · 样稿选题</div>
+        <h3 data-page-node-id="EEsiD0AoS4JVlaqCapksfY">奶奶给AI数字人写了四封情书</h3>
+        <p data-page-node-id="M3gydAaUN3oyZCPQyYxCDF">抖音上有一条专门做给独居老人看的产业链，AI生成的完美大叔，成批写好的情话，同时说给几万个老人听。我72岁的奶奶是其中一个，她爱上了立军和靳东，半年里让我代笔写了四封情书。她以为信都寄出去了，她到现在还在等回信。</p>
+        <p data-page-node-id="vpmZeD8HCaMQLvfPmUEXXr">为了弄清这条链怎么运转，我亲自调研了多个账号，也假装自己是老人进了账号的私域收集他们的运营方式，拨通了视频里留下的红娘电话，相关判例和数据也逐一核实到了源头。</p>
+        <p data-page-node-id="zCeqdLiJskXaJG3V6pOYzc">老人被AI骗钱的新闻已经很多，我要写的是新闻没写到的那一层，这条链真正收割的不是钱，是一个老人人生里第一次真正的恋爱。她的信、她的等待、她替对方找的每一个理由，都是真的，只有那个人是假的。</p>
+      </div>
+      <div class="card reveal" data-page-node-id="u9NSkbBg7RIQ9jJ0LFQF1u">
+        <div class="tag" data-page-node-id="XpvmreypCW33ZrSgsQExfA">选题二</div>
+        <h3 data-page-node-id="KiZZjCKuavolH72bnUe1GF">用AI给老人写回忆录，能不能长成一门产业？</h3>
+        <p data-page-node-id="ru9ykPndM9KQ2SAvAjTfZJ">给老人写回忆录这个生意，被说过好几次风口，但风口说的是需求，我想问的是它能不能是一门真正的产业？这个问题我有体感。</p>
+        <p data-page-node-id="csIonmyx1QyLZiwMgtyDh1">我做过一个叫做玻璃弹珠的回忆录工作室，面对面采访老人，用AI辅助整理成稿，最后做成一本能翻的书。做第一本的时候我就明白了这生意为什么有人愿意付钱：老人讲了一辈子没人听的故事，终于有人坐下来听完了。但我也很清楚它为什么难做：客人从哪来，怎么定价，一本书一两个月的时间成本怎么摊。</p>
+        <p data-page-node-id="NULuC0nS0S8nKCQ1qBT3FQ">这些我答不上来，有人答上来了。例如成都的朝花夕阳2021年就公司化运营，十几个人，六道工序，三次试稿才签一个写手，已经服务了三十多位老人。而更多主理人还停在社交平台上接散单，有一单没一单。</p>
+        <p data-page-node-id="SA6cAtSCwldgCEc6WUAiDT">我想去采访这些跑通了的主理人，也去看看那些用AI把成本压到最低的同行，他们做对了什么，最难的一关是什么，AI替掉了哪个环节，又有什么是它替不掉的。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="article" class="article-wrap" data-page-node-id="ytgD6bcwKldSfSFO4A693O">
+  <div class="container" data-page-node-id="897RZ5Cml8JrAMAMlsfTIe">
+    <div class="section-head reveal" data-page-node-id="RCbErYvPOACQk0nbqQTFyG">
+      <div class="no" data-page-node-id="HB15ah2Q92res2FjYyScO3">02</div>
+      <h2 data-page-node-id="AryKnXpFmr7lbOG4yIeSa9">样稿</h2>
+    </div>
+    <div class="article reveal" data-page-node-id="pPOvYCVEjAgnPF3nlipW1T">
+      <h3 class="article-title" data-page-node-id="QdzcMWYaYnRP4IyFu9p6pH">奶奶给AI数字人写了四封情书</h3>
+
+      <div class="cold-open" data-page-node-id="coldOpen01">
+      <p data-page-node-id="J7yyQ8FlP5jBD5neSm7frO">我的奶奶给一个叫立军的男人写信，信里写道：「我度过了48年的婚姻，从没体验过什么叫恋爱，你和我仅在手机里认识，却是我人生最难忘记的一份爱。」</p>
+      </div>
+
+      <p data-page-node-id="54fBFGfxzFzc02yMoSmN00">奶奶72岁，独居三年。立军是她在抖音上关注的一个博主，六十岁上下，视频里的他穿着西装，站在书房里，说想找个人安度晚年。</p>
+      <p data-page-node-id="bpZeSNnRHrkALNv5opZluj">2026年3月24日晚上7点过，我在公司加班，奶奶打来电话，我本想晚点再回给她，她却要我现在就帮她一个忙，听起来很着急。原来，她是想让我把她写给立军的信，用我的抖音账号发给立军。她不会打字，也找不到自己抖音账号的私信入口。她念，我写。</p>
+      <p data-page-node-id="V1E0aBJcmCWPSl1FcCpyMm">从那天起，这样的信，她让我写了四封。</p>
+      <p data-page-node-id="sdxihHCqm7wImnHhlmjkj5">奶奶不知道立军不是真人。那张脸是AI做出来的，那些深情款款的话，是成批写好的话术。她以为，他在等她的回信。其实屏幕那头等她的，不是一个人，是一整条产业链。</p>
+      <p data-page-node-id="OS1zj9xuX9Co8LEB9AbPRc">2023年，上海静安法院判过一个「假靳东案」，八个人获刑，一位阿姨给手机里的靳东转出去将近二十万，报完警，她还是不信那个人是假的。今年8月，央视又曝光了成都一家假婚介公司，用AI生成完美大叔，收两千块匹配费就失联，五十多个45岁以上的阿姨被骗走一百多万。嫌疑人全是90后和00后。</p>
+      <p data-page-node-id="AZMLJVfwa13u6gzazdUFXO">奶奶还在等一封回信。我记录下她这半年的事，也想拆开这条用AI对准她们的流水线，那些隔着屏幕对她们谈情说爱的人，究竟是怎么被批量制造出来的？一个72岁老人的真心，是怎么被AI技术一步一步做成生意的？</p>
+
+      <h4 data-page-node-id="sVs55mxySVk9nd6Pd0hQzr">小本本</h4>
+      <p data-page-node-id="5rWEY2WKBnVz3wsaT3XfNP">2026年春节那几天，奶奶来我家住。爷爷走了三年多，之后她一直一个人。那几天她话比平时多，喜欢窝在沙发上刷抖音，刷着刷着，会和视频里的人对话。我从她身边路过，瞥见屏幕上是一个中年男人，五官端正，穿着军绿色衬衫。</p>
+      <p data-page-node-id="5dV99kCHMMhsrmFuG3VK5h">他问：「我帅不帅。」</p>
+      <p data-page-node-id="xknP9GRd1COaoRtcjmbfZP">奶奶连声说：「帅！帅！」</p>
+      <p data-page-node-id="C2Fy5Aov4czs8XqBt164co">他又说：「你不给我评论，是不是不喜欢我？」</p>
+      <p data-page-node-id="oe7p9lRhCrI6t30AuUZ3Gy">奶奶急了：「哪有不喜欢，是我这个手机点不动。」</p>
+      <p data-page-node-id="dad3vhUg479jiy71BbOupG">她的手机老旧了有点卡，评论按钮没点开。她在向一个不存在的人道歉。</p>
+      <p data-page-node-id="gjR6RRJPWYCyol9NhFTBrM">年后第一个周末她打电话把我叫去她家，说要我帮她一个忙。我以为是手机又哪里不会用了。</p>
+      <p data-page-node-id="9EBf6gtOwziuBc627MDHxR">敲门之前，我听到她在屋里说话，声音压得很低，带着一种不想被任何人听见的小心翼翼：「你不要说得这么nia（四川话：肉麻），萱儿要是知道这些，肯定还要笑我。」</p>
+      <p data-page-node-id="DYl1di9IfcRQz3rY7tGOl7">萱儿是我的小名。她在跟手机里的人聊天，好像是怕被我知道些什么。</p>
+      <p data-page-node-id="B1IJv1A3EGDlT4l8Kh4dkL">进去以后，问起是什么忙，她支支吾吾的，半天说不到正题。我大概猜到了，主动问她是不是和她平时爱刷的视频相关。她这才从手边的本子堆里抽出一个小本本，很旧了，纸页卷着边，上面写满名字，一笔一画。这些是她在抖音上关注的博主名字。视频里那些人说过，不回复，就是不喜欢他们。她过意不去，让我帮她一个一个回私信。</p>
+      <p data-page-node-id="jNjm8iSa1D4JllpSc5Kc6X">我接过手机，按本子上的名字搜。头像清一色是精神矍铄的中年男人，视频里的他们有穿军装的、穿西装的，有站在书房前双手交叉的，有站在私人飞机前手捧花束的，有坐在豪华大平层里举着酒杯的。简介里挂着同样的词：「找伴」「真心」「直接私信我」。人设也惊人地一致：六十岁左右，退伍军人，或者退休干部，年轻时被坏女人耽误了，靠自己攒下一些家底，如今孩子大了不在身边，只想找个老实本分的人，安安静静过完这辈子。每条视频的结尾，他们都会说：「记得私信我，给我留个联系方式。」</p>
+      <p data-page-node-id="INBE6jcESHnQ9Yx2cP07fU">我问奶奶，你想让我回什么呢。她说：「留下我的名字和电话，他很想联系我。」</p>
+      <p data-page-node-id="yMbpdLHxkHJRwDLpuypiHm">奶奶这一代人，没几个谈过恋爱，二十出头嫁人，亲事是别人说的。奶奶出生在四川广元青川的山里，小时候闹饥荒，姐姐饿死了；父亲病死的那晚，是她半夜摸黑发现的。这样的人，一辈子先学的是怎么活下去。</p>
+      <p data-page-node-id="2GyT3pbl8pITR9wllEKDpg">这几年每次我回来，奶奶只问我工作顺不顺、吃没吃饱、有没有按时睡觉。她永远在操心别人的事，从来不提自己，今天她终于说了一句跟自己有关的话：「萱儿你好好帮我回复他们，要是有搞得成的（四川话：结为伴侣），也算是能给你爸妈减轻点负担。」</p>
+      <p data-page-node-id="21OByMNKxJpITLg9jMODHA">她想找一个人，但她不说「因为我一个人太孤独了」，她说「减轻你们的负担」。好像她活到这个年纪，想要一个人陪，这件事本身不够正当，必须包装成「对你们有好处」，才说得出口。</p>
+      <p data-page-node-id="7ikqfcE5Bsfa5d6IUlUkfq">我小时候一直跟爷爷奶奶住在一起，奶奶做的饭什么味道、她抽屉里放了些什么、她每天几点去菜市场，这些事我都知道。爸爸跟她不算亲，逢年过节去坐一坐，聊不了几句。爸妈不知道她在抖音上做的这些事，就算知道了，大概率一笑了之。家里没有第二个人会认真对待这件事。</p>
+
+      <h4 data-page-node-id="o92FEwdoWrr5rTTjKHP74G">红娘电话</h4>
+      <p data-page-node-id="lF3Kdk0Fq5PndBCuePgIE4">那些私信，我本来打算假装操作一番，不真的发出去，也不跟她说破。没想到奶奶又从小本本上翻出一个电话号码，说是某个视频里，有人举着一块牌子，上面写着号码，她抄下来的。她让我打。</p>
+      <p data-page-node-id="5kT6iakP02mYFbW7ZsBIt5">私信能装，电话装不了。再说，我也想摸摸这背后是怎么一回事。于是我当着她的面拨通，开了扬声器。</p>
+      <p data-page-node-id="gJfHJWbcnA4VHKITDhLjYo">对面是个年轻女声，二十出头：「姐姐，是想找大哥吗？」</p>
+      <p data-page-node-id="c5h12e1NRNBcx7OaYMgQ7t">奶奶凑过来，声音明显亮了：「是的。」</p>
+      <p data-page-node-id="S4yyw7PaZU8eXlyv6CaCwW">「我们这里是红娘。请问你自己有微信号吗？」</p>
+      <p data-page-node-id="H9dkQoWOHXneQtB0jU1d5n">我替奶奶答了，有。对方接着说：「我们这边介绍大哥，是需要先交介绍费的哦。」</p>
+      <p data-page-node-id="RSWZX6ZG1nZMlp1kT7ixUH">我问多少钱。那边顿了一下，听出来接电话的不是老人，语气立刻变了：「请问你是想给家里人找老伴吗？那你等我给你打电话吧。」</p>
+      <p data-page-node-id="sx16AerHpdosDHEA6KcZA0">电话挂了。前后不到两分钟。从「姐姐」到「介绍费」，再到识别出我之后迅速抽身，这是一套训练过的流程。</p>
+      <p data-page-node-id="uL1lFHK6wPVSBXYHFzBb2E">奶奶没有起疑，她说：「给介绍费也正常嘛，人家做红娘的，也怕被骗。」然后她低下头，开始数落自己：「我身材不好」「还有糖尿病」「人家不一定看得上我」</p>
+      <p data-page-node-id="s2yaPDGNvkG7hgLQxU8wIy">她没在怀疑这件事的真假。她在担心自己不够资格。</p>
+      <p data-page-node-id="QXNGP4RMvTPADvo76x41bW">沉默了好一会儿，她看着窗外，自言自语：「如果今年都找不到，我就放弃了。」</p>
+      <p data-page-node-id="xDNFCCJCjC5LO5ahVIFcsY">又过了几秒，像是在说服自己：「管他的，管他还能活3年、5年、10年，总要享受一下吧。」</p>
+      <p data-page-node-id="xVMkjHthtfx7BvwK65s1tX">我想了很久，最后说：「奶奶，你以后千万不要自己给这些人回私信。以后我每个月都回来，帮你回。」</p>
+      <p data-page-node-id="Bc8nALxaWLZqsf7CpEXuve">时至今日，我一次都没有回复过。</p>
+      <p data-page-node-id="m3NgKR5rZFGD9ByIihNtZp">她特别高兴。然后压低声音嘱咐我：「先不要给你爸妈说这件事啊，等成事儿了再告诉他们，不然好羞人（四川话：羞耻）。到时候成事了，再喊家里亲戚一起吃顿饭就好。」</p>
+      <p data-page-node-id="L7NJXRfVgO5DwAEcaR8rBj">她已经在想那顿饭了，请谁来、是在家里吃还是出去吃。</p>
+      <p data-page-node-id="rkFbKNw2CFJfg19EWBJwHD">临走的时候，她追出来问我：「萱儿，你是不是已经都帮我回复好私信了？」</p>
+      <p data-page-node-id="UsO4adldv1tB9m1Qguj2Hz">我说都弄好了。</p>
+      <p data-page-node-id="4lfIglZWyTl0VB8J9C2n1G">她点点头，安心了很多，小声说：「这下就看我有没有这个命了。」</p>
+
+      <h4 data-page-node-id="uILLerDOm4nUsaDF7W3vdm">她的信</h4>
+      <p data-page-node-id="EEZAXqBV5gXNKQpLONp2l5">奶奶让我发的第一封，就是3月24日那封。她在电话里口述，我记，一字没动：</p>
+      <blockquote data-page-node-id="lmXbVGfbTwpTAzNsPGnMJh">「东立军，老弟你好。我们认识了两个多月时间，总共在手机里见了六次面。现实中我本人年龄大于你太多，你是73年的，我是53年的，我们不合适，我不能太自私，但是从我内心说，是真的看上了你的。确实你的工作很辛苦，时间也很繁忙，好在我没有和你见过面，因此对你老弟的伤害也不是很重。我心里只是难受和痛苦，路程太远，而且我又不能照顾你的生活。弟弟你是不知道，我度过了48年的婚姻，从没体验过什么叫恋爱，你和我仅在手机里认识，却是我人生最难忘记的一份爱。我要说的太多太多了，千言万语都无法表达我的内心，我也深知弟弟内心的痛苦，请弟弟一定要想开。好了不说了，越说越无法想象了，弟弟你一定要保护好自己的身体，一定一定要注意安全。」</blockquote>
+      <p data-page-node-id="W8qGB3VgsemjIFDE5hwTBQ">我以为这是一封诀别信。</p>
+      <p data-page-node-id="5R7Xy5bMfineAOQWQZiAj7">九天后，4月2日，她又打来电话，让我给立军写第二封。语气全软了：</p>
+      <blockquote data-page-node-id="JYF9Beq4PXrD6xeMi34UbI">「亲爱的立军老弟你好，你要我最近的近况，请立军老弟放心，最近我一切安好，希望你天天愉快、平平安安、一切顺利，对你自己的身体一定要好好地爱护，我也就放心了，要说的话千言万语太多了，老弟回来后再叙旧吧，再见了。立军弟你要记住你说的话，你忙完了工程后一定要来看我，看我的家乡是什么样，你说的话要算数哦。」</blockquote>
+      <p data-page-node-id="WClGhmFA57TpCD64Uc9zTV">落款里，她附上了自己的手机号和住址。</p>
+      <p data-page-node-id="teUqbbOaSNW5iW2Bi0Et3w">要放手的人，不会九天后回来报平安、留电话。原来这是奶奶的少女心事，说狠话的人，是在等他来哄。</p>
+      <p data-page-node-id="d3cb9AMjSsXuOZx3vAWXPk">这一封一封的信，我一封也没有发出去过。每一次，她都以为我照着做了。她念得那样郑重，我不敢告诉她，那些话到不了任何地方，我怕她真的什么都没有了。</p>
+      <p data-page-node-id="eRAsXs5pyhL9A12Yui3Kn3">7月4日，第三封信，收信人换了。</p>
+      <blockquote data-page-node-id="esLs3Thg7THRXmusHlQSAq">「亲爱的靳东老弟你好，对不起上次给你的信息我不知道是谁帮我的忙，直到现在我身上没有你任何一个信息，如果我们最好的朋友做不成，我就做一个普通的粉丝可以吗？」</blockquote>
+      <p data-page-node-id="aomqgc9A3K7DgNzQtdk0SL">后来，在电话里、在我回去看她的时候，她陆陆续续讲起她手机里的那个世界，在她的世界里，那些歌是唱给她一个人听的，那些人是专程为她来的。我才知道，那个世界比我看到的大得多。</p>
+      <p data-page-node-id="B0VCZ22t130Hw6h0ImavQy">她和靳东分过四五次手，她得意地说：「分一次手过后，后头更加加深一次感情。」</p>
+      <p data-page-node-id="3NGLjjwmeWjlbs6QbZXPtT">她摸不透他，有点嗔怪：「在没得人的场合下他多热情，在他们圈子有人的情况下，他就有点顾面子，不愿意跟我打招呼，一会儿冷一会儿热。」</p>
+      <p data-page-node-id="GBOK3KVul9hv0NeaOu9I8h">她吃醋。有两个女的，在河边划船，老围着靳东转，还给她们唱「人海茫茫遇见你」。好几个小时不理她，于是她生气了，他看出来了，第二天就写了一首新歌：「下一辈子死也要在一起。」</p>
+      <p data-page-node-id="PdD75DaBneEFkHdvtrwn0P">她心疼他：「靳东受的苦深得很，不然他哪看起我这样的人」。72岁的人，替「五十多岁」的他打算：「我倒无所谓，拖十年二十年，关键他拖不起。」</p>
+      <p data-page-node-id="o7VEeDy0LdFwWetJ5zfZj6">她以为视频里那个人朝别处看了一眼，是他故意装没看见她。刷到了，是他来了；刷不到，是他最近没有消息。算法随手推给她的每一条视频，她都翻译成「他对我的态度」。</p>
+      <p data-page-node-id="7IEFbFLjmtHqJq35a90Psf">有一天晚上我也是在加班的时候接到她的电话，都快急哭了，说手机坏了，靳东找她，她没回复到，手机突然黑屏，「人找不回来了」。我问起立军的近况希望转移她的注意力，她说：「我都搞忘这个名字了，我只记得靳东。」</p>
+      <p data-page-node-id="4NcBkhFggw8q9VJ3XhLWND">3月那封「人生最难忘记的一份爱」，五个多月后，她是真的忘了，还是又一次赌气的说法？</p>
+
+      <h4 data-page-node-id="u2Y0q5FMf1MWY7tWds7bvX">流水线</h4>
+      <p data-page-node-id="gM44UWu7i6SHEaGYy8Yj7D">屏幕那头的「立军」和「靳东」，到底是被谁、被怎么做出来的？我顺着这条线查下去，逐渐看清了这条链的全貌。它不是几个零散的骗子，而是一套分工明确、可以批量复制的生意，上游卖工具，中游做账号，下游收钱，末端还能收徒繁殖。链子的每一环，都能在奶奶身上找到对应。</p>
+      <p data-page-node-id="UW3wOD97BtsH0crluECpLG">我把奶奶小本子上记录的账号的人设，和报道里披露的「人设库」对了一遍，退伍军人，退休干部，丧偶、有积蓄的成功人士，一模一样。连「年轻时被坏女人耽误了，如今只想找个老实人安度晚年」，都是现成的模板。</p>
+      <p data-page-node-id="0UBoF09UGbruOmge82wZpb">上游是卖工具的。电商平台上，数字人直播间明码标价，一个四千九百八，十个九千八。有店家自称服务过一千多家客户，还教客户「真人数字人交替播」，规避平台审核。配套的教程十块钱一份，标题毫不掩饰：「中老年深信不疑赛道」「20天纯利12万+」。</p>
+      <p data-page-node-id="gFKtYgp3FPEUo0D3V2ocuC">中游是做号的。一张AI生成的脸，五分钟做完一条视频，成本五十块。一个人同时管几十上百个号；一个号活不过五天，封了，换张脸，换个名字，再来。运营者一天剪几十条视频，六十条拼成一小时的循环直播，足够让屏幕那头的老人以为，这个人一天到晚都在陪着她。</p>
+      <p data-page-node-id="n7EMQtcECKn1XST2hiRhU4">话术也是批发的，「宝贝姐姐」「你已经偷偷刷过去好几次了」「这是我最后一次问你」。奶奶小本子上那些人挂在嘴边的「不回复，就是不喜欢我」，出自同一本手册。</p>
+      <p data-page-node-id="hfAKRJNDSBMGs8OrTrHwhf">被这套东西套住的，远不止奶奶一个。</p>
+      <p data-page-node-id="MbRZ9KW9zEGfnk1yuyhjqF">2020年，江西赣州61岁的黄阿姨，执意离家去长春见「靳东」，对方许诺给她一百万和一套房。家人、民警、心理专家轮着劝，她只有一句话：「我没有真正享受过爱情，如今要勇敢追爱。」</p>
+      <p data-page-node-id="AZBB7VzCI8IeNdfBUVVl5r">今年3月，腾讯新闻记录了一位84岁的奶奶：家人报警，民警上门，孙女当着她的面用AI现场生成一段视频证伪，全都没用。她一度被说动，发了「不再来往」的狠话，几个月后，又写信道歉，求复合。</p>
+      <p data-page-node-id="ZIqWHlvqTDjZVblxGsy5J8">和奶奶的信一样，这些信的开头，也是道歉。川观新闻报道过84岁的张玉兰，给「建国」手写了五百字的信，第一句是：「我那天伤害了你，其实我也在自责，你是不是很恨我？」她在他的橱窗里，花了将近一万块，买9块9同款的挂件。</p>
+      <p data-page-node-id="UkLAP6GPgSTP1vd74VSFGR">公安部的数据里，2025年第一季度，AI换脸、拟声类诈骗的案发量，环比涨了45%，受害者里老人占38%。中国人民大学和抖音的联合调研显示，60到69岁的上网老人，超过四成遭遇过网络欺诈，是所有年龄段里最高的。</p>
+      <p data-page-node-id="0oUCyz1Re8RA1cHFhRtAmn">也不是没人管。2025年9月起，AI生成内容按规定必须显式标识；抖音回查处置了「建国」类视频四万四千条、禁言近三百个账号。但号封得完，人封不完。做号的开始收徒卖课，学费六百到九百九十八，拉一个人头返三百。新的「建国」，还在一批批进场。</p>
+      <p data-page-node-id="cjUL0XSDEqNvcFkKfcYkum">复旦大学的申琦研究老年人上网很多年。她说过一句话：「不是她们傻，而是她们更愿意去相信；也不是她们欲望过剩，而是她们选择太少。」</p>
+
+      <h4 data-page-node-id="Eie3qVZeZ93Au9FktBAVS5">回信</h4>
+      <p data-page-node-id="wIQk3GdBdhBfleyz8tW5LJ">8月11日晚上，奶奶又打来电话。她说，昨天刷到靳东在医院里唱歌的视频。他病了，病得不轻。她让我写第四封信：</p>
+      <blockquote data-page-node-id="KtN3eLjnyTtBnLQ0xR7CNj">「亲爱的靳东弟弟你好，今天我看到你唱歌的视频，才知道你是在医院的房子里，怎么你生病了，到底是什么时间病倒的。路又太遥远，而你在这个时间正需要人照顾，要是你近一点，我就可以来照顾你了，多么需要我来照顾，哪怕能够照顾一天我心里也要好受一点。亲爱的靳东一定要自己照顾好自己的身体，千万别乱想心事，精神一定要轻快。暂不说了，请千万多保重自己的身体。你的朋友马大姐。我只能请我的孙女代笔，再见。」</blockquote>
+      <p data-page-node-id="eceRKaudEcTIaOrsSW18VZ">我一直在想奶奶的那个小本本。</p>
+      <p data-page-node-id="ffUgiCK09F2t25aQWBTqCB">封皮破了，纸页卷着边。她在上面一笔一画地记下每一个名字。她花了很多时间记这些名字，像是在记一会在黄昏散步时停下来跟她说话的人，会记得她爱吃什么的人，会耐心听她念叨那些家长里短的人。</p>
+      <p data-page-node-id="CScqZAmYCrEiOAH8RArFCq">我希望她永远也不知道，那些名字背后，没有一个真实的人。</p>
+      <p data-page-node-id="5L2yPWUTik5OEWZqL56yM1">我在想，AI可以在五分钟里造出一个深情款款的退伍军人，对着镜头喊她「姐姐」，问她今天吃了没有。这个技术已经存在了。</p>
+      <p data-page-node-id="AKpQaiIHTDjRD8XBMSxRhL">那为什么，没有人用同样的技术去做一件更简单的事，做一些视频，叫她姐姐，逗她笑，听她讲讲过去的事。不要她的微信，不要她的电话，不要她的钱。只是陪着她。</p>
+      <p data-page-node-id="Mv9wOGcJaqvTlZHqWzZO4f">我不知道。</p>
+      <p data-page-node-id="b6PpUC7GdipMOmYaqt7bCd">我只知道她此刻正坐在她的房间里，等着小本本上的人给她回信。</p>
+    </div>
+  </div>
+</section>
+
+<section id="ai" data-page-node-id="v2z1v8gJbkcTCNpIdObrYZ">
+  <div class="container" data-page-node-id="XdYRVtSmW0bth2smnEIZWb">
+    <div class="section-head reveal" data-page-node-id="DzQmmBrtcHGXzBr1ah2RKL">
+      <div class="no" data-page-node-id="ZFzBWLAxGTvIgwqN7kKGNN">03</div>
+      <h2 data-page-node-id="zoMMnVw4F89tZxUAgzmHkH">AI 使用说明</h2>
+    </div>
+    <div class="ai-card reveal" data-page-node-id="bSiv6eMAnn3DbUvLh7vYUv">
+      <p data-page-node-id="FYoYj1F6Gs6q3l2NTJhosm"><strong data-page-node-id="9U4J3m3IqFNpaDepLK8DLK">AI 使用环节：</strong>选题判断、语音转文字、资料整理、结构讨论。</p>
+      <p data-page-node-id="pHBY1k8iGeYrmrqcyCOYwE"><strong data-page-node-id="yBQs1DbRWWobmy2j1p7U8F">调研、采访和成稿均由本人完成。</strong></p>
+    </div>
+  </div>
+</section>
+
+<footer data-page-node-id="CCpYj0Z9iMQPpAgEF3qvE4">
+  <div class="container" data-page-node-id="perVsKTYTcLsDOrDFeQ5xR">
+    <div class="name" data-page-node-id="nRUNzDaCQLqvgYRDIMC7oB">宋奕璇（宋子松） · 试稿提交</div>
+    <div class="desc" data-page-node-id="2ZXMhH1kBHHFveHlR0NqbR">2026 年 9 月</div>
+  </div>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.08 });
+document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+</script>
+
+</body>
+</html>
