@@ -164,6 +164,27 @@ section{padding:88px 0}
 }
 .article blockquote:nth-of-type(even){transform:rotate(.4deg)}
 
+/* ===== 文中插图：两张并排（小本本 / 手机截图） ===== */
+.photo-pair{
+  display:flex;
+  gap:14px;
+  justify-content:center;
+  align-items:flex-start;
+  max-width:620px;
+  margin:36px auto 42px;
+}
+.photo-pair picture{display:block;flex:1 1 0;min-width:0}
+.photo-pair img{
+  display:block;
+  width:100%;
+  height:auto;
+  border:2px solid var(--ink);
+  border-radius:var(--radius-hand-alt);
+  background:var(--paper);
+}
+.photo-pair picture:nth-child(1) img{transform:rotate(-.6deg)}
+.photo-pair picture:nth-child(2) img{transform:rotate(.6deg)}
+
 /* 冷开场：与信件引用块区分（纸白底+陶土红左边条，无黄色底） */
 .cold-open{
   margin:0 0 48px;
@@ -211,6 +232,7 @@ footer .desc{color:var(--muted);font-size:13px}
   section{padding:64px 0}
   .article blockquote{padding:24px 22px}
   .ai-card{padding:30px 24px}
+  .photo-pair{gap:10px;max-width:none;margin:28px auto 34px}
 }
 </style>
 </head>
@@ -296,6 +318,16 @@ footer .desc{color:var(--muted);font-size:13px}
       <p data-page-node-id="DYl1di9IfcRQz3rY7tGOl7">萱儿是我的小名。她在跟手机里的人聊天，好像是怕被我知道些什么。</p>
       <p data-page-node-id="B1IJv1A3EGDlT4l8Kh4dkL">进去以后，问起是什么忙，她支支吾吾的，半天说不到正题。我大概猜到了，主动问她是不是和她平时爱刷的视频相关。她这才从手边的本子堆里抽出一个小本本，很旧了，纸页卷着边，上面写满名字，一笔一画。这些是她在抖音上关注的博主名字。视频里那些人说过，不回复，就是不喜欢他们。她过意不去，让我帮她一个一个回私信。</p>
       <p data-page-node-id="jNjm8iSa1D4JllpSc5Kc6X">我接过手机，按本子上的名字搜。头像清一色是精神矍铄的中年男人，视频里的他们有穿军装的、穿西装的，有站在书房前双手交叉的，有站在私人飞机前手捧花束的，有坐在豪华大平层里举着酒杯的。简介里挂着同样的词：「找伴」「真心」「直接私信我」。人设也惊人地一致：六十岁左右，退伍军人，或者退休干部，年轻时被坏女人耽误了，靠自己攒下一些家底，如今孩子大了不在身边，只想找个老实本分的人，安安静静过完这辈子。每条视频的结尾，他们都会说：「记得私信我，给我留个联系方式。」</p>
+      <figure class="photo-pair">
+        <picture>
+          <source srcset="images/grandma-notebook.webp" type="image/webp">
+          <img src="images/grandma-notebook.jpg" width="800" height="512" alt="奶奶的小本本，纸页卷着边，上面一笔一画写满她在抖音上关注的博主名字" decoding="async">
+        </picture>
+        <picture>
+          <source srcset="images/ai-nianren-video.webp" type="image/webp">
+          <img src="images/ai-nianren-video.jpg" width="800" height="781" alt="奶奶的手机屏幕，一个AI生成的“退休干部”人设短视频正在播放，画面标注“作者声明：内容由AI生成”" decoding="async">
+        </picture>
+      </figure>
       <p data-page-node-id="INBE6jcESHnQ9Yx2cP07fU">我问奶奶，你想让我回什么呢。她说：「留下我的名字和电话，他很想联系我。」</p>
       <p data-page-node-id="yMbpdLHxkHJRwDLpuypiHm">奶奶这一代人，没几个谈过恋爱，二十出头嫁人，亲事是别人说的。奶奶出生在四川广元青川的山里，小时候闹饥荒，姐姐饿死了；父亲病死的那晚，是她半夜摸黑发现的。这样的人，一辈子先学的是怎么活下去。</p>
       <p data-page-node-id="2GyT3pbl8pITR9wllEKDpg">这几年每次我回来，奶奶只问我工作顺不顺、吃没吃饱、有没有按时睡觉。她永远在操心别人的事，从来不提自己，今天她终于说了一句跟自己有关的话：「萱儿你好好帮我回复他们，要是有搞得成的（四川话：结为伴侣），也算是能给你爸妈减轻点负担。」</p>
